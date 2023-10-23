@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 20px;
+}
+
+form {
+	width: 300px;
+	margin: 0 auto;
+	background: #ffffff;
+	padding: 20px;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+}
+
+label, input {
+	display: block;
+	margin: 10px 0;
+}
+
+input[type="text"], input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+}
+
+button {
+	width: 100%;
+	padding: 10px;
+	background-color: #007BFF;
+	color: #ffffff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+</style>
+</head>
+<body>
+	<h1>Login</h1>
+	<form action="/login" method="post">
+		<label for="email">Email:</label> 
+		<input type="text" id="email"name="email"th:required="true" required><br> <br>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password"th:required="true" required><br>
+		<br>
+		<button type="submit">Login</button>
+	</form>
+</body>
+</html>

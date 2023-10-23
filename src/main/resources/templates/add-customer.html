@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Add Customer</title>
+<style>
+form {
+	width: 50%;
+	margin: 0 auto;
+}
+
+label, input {
+	display: block;
+	margin: 10px 0;
+}
+
+input[type="text"] {
+	width: 100%;
+	padding: 5px;
+}
+
+button {
+	background-color: #007BFF;
+	color: #ffffff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+
+a {
+	display: inline-block;
+	margin-top: 20px;
+	text-decoration: none;
+}
+</style>
+</head>
+<body>
+	<h1>Add Customer</h1>
+	<form th:action="create" method="post">
+		<label for="first_name">First Name* :</label>
+		<input type="text"
+			id="first_name" name="first_name"th:required="true" required><br>
+		<br> <label for="last_name">Last Name* :</label> <input type="text"
+			id="last_name" name="last_name"th:required="true" required><br>
+		<br> <label for="street">Street:</label> <input type="text"
+			id="street" name="street"><br>
+		<br> <label for="address">Address:</label> <input type="text"
+			id="address" name="address"><br>
+		<br> <label for="city">City:</label> <input type="text" id="city"
+			name="city"><br>
+		<br> <label for="state">State:</label> <input type="text"
+			id="state" name="state"><br>
+		<br> <label for="email">Email:</label> <input type="text"
+			id="email" name="email"><br>
+		<br> <label for="phone">Phone:</label> <input type="text"
+			id="phone" name="phone"><br>
+		<br>
+		<button type="submit">Add Customer</button>
+	</form>
+	<a href="/customer">Back to Customer List</a>
+</body>
+</html>

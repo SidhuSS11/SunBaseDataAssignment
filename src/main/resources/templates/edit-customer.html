@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Update Customer</title>
+<style>
+form {
+	width: 50%;
+	margin: 0 auto;
+}
+
+label, input {
+	display: block;
+	margin: 10px 0;
+}
+
+input[type="text"] {
+	width: 100%;
+	padding: 5px;
+}
+
+button {
+	background-color: #007BFF;
+	color: #ffffff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+</style>
+</head>
+<body>
+	<h1>Update Customer</h1>
+	<form method="post" th:action="@{/customer/edit}">
+		<label for="firstName">First Name:</label> <input type="text"
+			id="first_name" name="first_name" th:value="${customer.first_name}"
+			th:placeholder="${customer.first_name}" /><br> <label
+			for="lastName">Last Name:</label> <input type="text" id="last_name"
+			name="last_name" th:value="${customer.last_name}"
+			th:placeholder="${customer.last_name}" /><br> <label
+			for="street">Street:</label> <input type="text" id="street"
+			name="street" th:value="${customer.street}"
+			th:placeholder="${customer.street}" /><br> <label for="address">Address:</label>
+		<input type="text" id="address" name="address"
+			th:value="${customer.address}" th:placeholder="${customer.address}" /><br>
+
+		<label for="city">City:</label> <input type="text" id="city"
+			name="city" th:value="${customer.city}"
+			th:placeholder="${customer.city}" /><br> <label for="state">State:</label>
+		<input type="text" id="state" name="state"
+			th:value="${customer.state}" th:placeholder="${customer.state}" /><br>
+
+		<label for="email">Email:</label> <input type="text" id="email"
+			name="email" th:value="${customer.email}"
+			th:placeholder="${customer.email}" /><br> <label for="phone">Phone:</label>
+		<input type="text" id="phone" name="phone"
+			th:value="${customer.phone}" th:placeholder="${customer.phone}" /><br>
+
+		<button type="submit">Update Customer</button>
+	</form>
+</body>
+</html>
